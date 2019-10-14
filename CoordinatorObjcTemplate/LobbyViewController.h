@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@class LobbyViewController;
 @protocol LobbyViewControllerCoordinator <NSObject>
+-(void)lobbyViewController:(LobbyViewController*)lobbyViewController enterGarageButtonDidTap:(UIButton*)sender;
 @end
 
 @interface LobbyViewController : UIViewController

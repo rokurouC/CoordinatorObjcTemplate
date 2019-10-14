@@ -22,6 +22,7 @@
 		BECFA2AC234DC92200DBB43B /* PushNavigationRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = BECFA2AB234DC92200DBB43B /* PushNavigationRouter.m */; };
 		BECFA2B0234DD33700DBB43B /* BackyardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECFA2AF234DD33700DBB43B /* BackyardViewController.m */; };
 		BECFA2B3234DD39E00DBB43B /* BackyardCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = BECFA2B2234DD39E00DBB43B /* BackyardCoordinator.m */; };
+		BECFA2BC2354286400DBB43B /* GarageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECFA2BB2354286400DBB43B /* GarageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		BECFA2AF234DD33700DBB43B /* BackyardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackyardViewController.m; sourceTree = "<group>"; };
 		BECFA2B1234DD39E00DBB43B /* BackyardCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackyardCoordinator.h; sourceTree = "<group>"; };
 		BECFA2B2234DD39E00DBB43B /* BackyardCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackyardCoordinator.m; sourceTree = "<group>"; };
+		BECFA2BA2354286400DBB43B /* GarageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GarageViewController.h; sourceTree = "<group>"; };
+		BECFA2BB2354286400DBB43B /* GarageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GarageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 		BECFA281234C790800DBB43B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BECFA2B92354284800DBB43B /* Garage */,
 				BECFA29A234C99F300DBB43B /* Home */,
 				BECFA2A3234DAD2F00DBB43B /* Lobby */,
 				BECFA2AD234DD31700DBB43B /* Backyard */,
@@ -182,6 +186,15 @@
 				BECFA278234C741100DBB43B /* main.m */,
 			);
 			name = "Supported files";
+			sourceTree = "<group>";
+		};
+		BECFA2B92354284800DBB43B /* Garage */ = {
+			isa = PBXGroup;
+			children = (
+				BECFA2BA2354286400DBB43B /* GarageViewController.h */,
+				BECFA2BB2354286400DBB43B /* GarageViewController.m */,
+			);
+			name = Garage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +273,7 @@
 				BECFA2B0234DD33700DBB43B /* BackyardViewController.m in Sources */,
 				BECFA292234C8F1600DBB43B /* HomeCoordinator.m in Sources */,
 				BECFA29F234C9CBC00DBB43B /* AppRouter.m in Sources */,
+				BECFA2BC2354286400DBB43B /* GarageViewController.m in Sources */,
 				BECFA279234C741100DBB43B /* main.m in Sources */,
 				BECFA2A6234DAD4B00DBB43B /* LobbyViewController.m in Sources */,
 				BECFA2B3234DD39E00DBB43B /* BackyardCoordinator.m in Sources */,

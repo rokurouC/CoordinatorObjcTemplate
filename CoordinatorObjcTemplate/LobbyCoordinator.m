@@ -16,4 +16,11 @@
     [lobbyViewController setTitle:@"Lobby"];
     [self.router presentViewController:lobbyViewController withAnimated:animated onDismissed:onDismiss];
 }
+
+// MARK: LobbyViewControllerCoordinator
+- (void)lobbyViewController:(nonnull LobbyViewController *)lobbyViewController enterGarageButtonDidTap:(nonnull UIButton *)sender {
+    GarageViewController *garageViewController = [GarageViewController new];
+    [self.router presentViewController:garageViewController withAnimated:YES onDismissed:nil];
+}
+
 @end

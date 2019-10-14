@@ -35,10 +35,18 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)presentViewController:(nonnull UIViewController *)viewController withAnimated:(Boolean)animated onDismissed:(nullable void (^)(void))onDismiss { 
-    NSValue *key = [NSValue valueWithNonretainedObject:viewController];
-    [self.onDismissForViewController setObject:onDismiss forKey:key];
-    [self presentByPush:viewController withAnimated:animated];
+- (void)presentViewController:(nonnull UIViewController *)viewController withAnimated:(Boolean)animated onDismissed:(nullable void (^)(void))onDismiss {
+    if (onDismiss != nil) {
+        NSValue *key = [NSValue valueWithNonretainedObject:viewController];
+        [self.onDismissForViewController setObject:onDismiss forKey:key];
+    }
+    NSUInteger parentViewControllerIndex = [self.navigationController.viewControllers indexOfObject:self.parentViewController];
+    if (parentViewControllerIndex == ([self.navigationController.viewControllers count] - 1)) {
+        [self presentByPush:viewController withAnimated:animated];
+    }else {
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
 }
 
 // MARK: Transition methods
@@ -90,6 +98,11 @@
     if (dismissedViewController != nil && ![self.navigationController.viewControllers containsObject:dismissedViewController]) {
         [self performOnDismissForViewController:dismissedViewController];
     }
+}
+
+- (void)dealloc
+{
+    NSLog(@"%@ dealloc", NSStringFromClass([self class]));
 }
 
 @end

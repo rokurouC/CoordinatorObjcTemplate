@@ -50,4 +50,9 @@
     //Child should implement
 }
 
+- (void)dealloc
+{
+    NSLog(@"%@ dealloc", NSStringFromClass([self class]));
+}
+
 @end

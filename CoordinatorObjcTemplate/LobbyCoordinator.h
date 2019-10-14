@@ -8,6 +8,7 @@
 
 #import "RCBaseCoordinator.h"
 #import "LobbyViewController.h"
+#import "GarageViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -28,8 +28,10 @@
 
 // MARK: Router
 - (void)presentViewController:(nonnull UIViewController *)viewController withAnimated:(Boolean)animated onDismissed:(nullable void (^)(void))onDismiss {
-    NSValue *key = [NSValue valueWithNonretainedObject:viewController];
-    [self.onDismissForViewController setObject:onDismiss forKey:key];
+    if (onDismiss != nil) {
+        NSValue *key = [NSValue valueWithNonretainedObject:viewController];
+        [self.onDismissForViewController setObject:onDismiss forKey:key];
+    }
     if (self.navigationController.viewControllers.count == 0) {
         [self presentModally:viewController withAnimated:animated];
     }else {
@@ -89,4 +91,8 @@
     }
 }
 
+- (void)dealloc
+{
+    NSLog(@"%@ dealloc", NSStringFromClass([self class]));
+}
 @end
